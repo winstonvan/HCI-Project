@@ -1,0 +1,1390 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<meta property="og:title" content="" />-->
+    <!--<meta property="og:url" content="" />-->
+    <!--<meta property="og:image" content="" />-->
+    <!--<meta property="og:site_name" content="" />-->
+    <!--<meta property="og:description" content="" />-->
+    <title>Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+            <script src="scripts/html5shiv.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+<script>
+
+function searchFunct() {
+
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+
+    filter = input.value.toUpperCase();
+
+    ul = document.getElementsByClassName("theList");
+    li = document.getElementsByClassName("plist");
+    div = document.getElementsByClassName("info");
+    for (i = 0; i < div.length; i++) {
+        a = div[i].getElementsByClassName("rName")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+
+  <section class="cover-main" id="home">
+    <header>
+      <nav class="nav-wrapper">
+        <div class="logo">
+            <a href="#">
+              <img src="images/logoo.png" class="logo">
+            </a>
+
+
+        </div>
+        <ul class="menu">
+
+        <li class="blocker"><a href="#home">HOME</a></li>
+        <li class="blocker"><a href="#work">LIST</a></li>
+        <li class="blocker"><a href="#Restaurants">RESTAURANTS</a></li>
+        <li class="blocker"><a href="#about">ABOUT</a></li>
+        <li class="blocker"><a href="https://www.skipthedishes.com/">ORDER ONLINE </a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+  <div class="wrapper">
+    <ul id="scene"
+                   data-invert-x="false"
+                   data-invert-y="false"
+                   data-scalar-x="7"
+                   data-scalar-y="7"
+                   data-friction-x="0.1"
+                   data-friction-y="0.1"
+                   data-origin-x="0.5"
+                   data-origin-y="0.5">
+      <li class="layer name blocker" data-depth="0.90">Group J</li>
+      <li class="layer btn btn-main blocker" data-depth="0.30">
+        <a href="#" class ="portfolio-btn">View portfolio</a>
+        <a href="#" class ="contact-btn">Contact me</a>
+      </li>
+    </ul>
+  </div>
+
+  </section>
+  <section class="masonry-grid" id="work">
+</div>
+
+<h2 class="sub-title">LIST</h2>
+
+<input type="text" id="myInput" oninput="searchFunct()" placeholder="Search for Restaurant" title=""> </input>
+
+  <div id='filters'>
+    <input type='checkbox' value='$'> $</input> <br />
+    <input type='checkbox' value='$$' > $$</input> <br />
+    <input type='checkbox' value='$$$' > $$$</input> <br />
+    <input type='checkbox' value='$$$$' > $$$$</input> <br /><br />
+         _______________
+    <br />
+    <br />
+
+    <input type='checkbox' value='American'> American</input> <br />
+    <input type='checkbox' value='Asian' > Asian</input> <br />
+    <input type='checkbox' value='Bar' > Bar</input> <br />
+    <input type='checkbox' value='Canadian' > Canadian</input> <br />
+    <input type='checkbox' value='Diner' > Diner</input> <br />
+    <input type='checkbox' value='Mediterranean' > Mediterranean</input> <br />
+    <input type='checkbox' value='Mexican' > Mexican</input> <br />
+    <input type='checkbox' value='Pizza' > Pizza</input> <br />
+    <input type='checkbox' value='Pub' > Pub</input> <br />
+    <input type='checkbox' value='Steakhouse' > Steakhouse</input> <br />
+    <input type='checkbox' value='Vegan_Options' > Vegan Options</input> <br />
+    <input type='checkbox' value='Vegetarian_Friendly' > Vegetarian Friendly</input> <br />
+
+
+
+
+  </div>
+
+
+<ul class= "TheList">
+
+  <li class='plist Vegan Mexican $$ $$$' onclick="RestaurantDetails('tucos1img')">
+    	<div class="grid_item"><img src="images/tucos1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Tucos Tacos Lounge	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$-$$$	</span> <br />
+  		<span class="rInfo"> Vegan, Mexican	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Italian Vegetarian_Friendly Vegan_Options $$$' onclick="RestaurantDetails('bella1img')">
+    	<div class="grid_item"><img src="images/bella1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Bella Vita Cucina	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Italian, Vegetarian Options, Vegan Options	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Pub Pizza $$' onclick="RestaurantDetails('TheLaughingBuddhaimg')">
+    	<div class="grid_item"><img src="images/budda1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> The Laughing Budda </span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$	</span> <br />
+  		<span class="rInfo"> Pub, Pizza	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Pub American $ ' onclick="RestaurantDetails('DogHouseBarandGrillimg')">
+    	<div class="grid_item"><img src="images/dog1.jpg" > </div>
+      <div class="info">
+      	<span class="rName"> Doghouse Bar and Grill	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $	</span> <br />
+  		<span class="rInfo"> Pub, American	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Canadian Diner $$' onclick="RestaurantDetails('gloria1img')">
+    	<div class="grid_item"><img src="images/gloria1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Gloria's Restaurant  </span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$	</span> <br />
+  		<span class="rInfo"> Diner, Canadian	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Italian Pizza Vegetarian_Friendly $$$' onclick="RestaurantDetails('gusto1img')">
+    	<div class="grid_item"><img src="images/gusto1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Di Gusto Pizza & Pasta	</span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Italian, Pizza, Vegetarian Friendly	</span> <br />
+      </div>
+    </li>
+    <li class='plist Pub Bar $$' onclick="RestaurantDetails('fiann1img')">
+    	<div class="grid_item"><img src="images/fionn1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Fionn MacCool's Irish Pub	</span> <br />
+  		<span class="rInfo"> 4.0 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$	</span> <br />
+  		<span class="rInfo"> Pub, Bar	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Pub American Bar $$ $$$' onclick="RestaurantDetails('hard1img')">
+    	<div class="grid_item"><img src="images/hard1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Hardrock 42 Gastropub	</span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$ - $$$	</span> <br />
+  		<span class="rInfo"> Pub, American, Bar	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Steakhouse Canadian Bar American $$$' onclick="RestaurantDetails('881img')">
+    	<div class="grid_item"><img src="images/881.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Lot 88 Steakhouse and Bar	</span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Steakhouse, Bar, Canadian American	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Pub Canadian $$ $$$' onclick="RestaurantDetails('mic1img')">
+    	<div class="grid_item"><img src="images/mic1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> M.I.C Canadian Eatery and Whiskey Pub	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$ - $$$	</span> <br />
+  		<span class="rInfo"> Pub, American	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Bar Canadian American $$ $$$' onclick="RestaurantDetails('mile1img')">
+    	<div class="grid_item"><img src="images/mile1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Milestones	</span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$ - $$$	</span> <br />
+  		<span class="rInfo"> Bar, Canadian, American	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Canadian Vegetarian_Friendly Vegan_Options $$' onclick="RestaurantDetails('motley1img')">
+    	<div class="grid_item"><img src="images/motley1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> The Motley Kitchen	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$	</span> <br />
+  		<span class="rInfo"> Canadian, Vegetarian Friendly, Vegan Options	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Bar Vegetarian_Friendly $$ $$$' onclick="RestaurantDetails(this.id)">
+    	<div class="grid_item"><img src="images/oscar1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Oscar's Grill	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$ - $$$	</span> <br />
+  		<span class="rInfo"> Bar, Vegetarian Friendly	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Italian Mediterranean Canadian $$$' onclick="RestaurantDetails('pm1img')">
+    	<div class="grid_item"><img src="images/pm1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> P&M Kouzzina	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Italian, Mediterranean, Canadian	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Steakhouse American Canadian $$$' onclick="RestaurantDetails('MrPrimeRibimg')">
+    	<div class="grid_item"><img src="images/prime1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Mr Prime Rib	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Steakhouse, American, Canadian	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Italian Canadian Vegetarian_Friendly $$$' onclick="RestaurantDetails('respect1img')">
+    	<div class="grid_item"><img src="images/respect1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Respect is Burning Kitchen + Bar	</span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Italian, Canadian, Vegatarian Friendly	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Pizza, Canadian, Italian $$$' onclick="RestaurantDetails('')">
+    	<div class="grid_item"><img src="images/ripe1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Ripe Restaurant	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Pizza, Canadian, Italian	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Asian Vegetarian_Friendly $$ $$$' onclick="RestaurantDetails('sizzle1img')">
+    	<div class="grid_item"><img src="images/sizzle1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Sizzle Mongolian Grill	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$ - $$$	</span> <br />
+  		<span class="rInfo"> Asian, Vegetarian Friendly	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Italian Vegan_Options Canadian $$$$' onclick="RestaurantDetails('tommy1img')">
+    	<div class="grid_item"><img src="images/tommy1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Tommy's Not Here	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$$	</span> <br />
+  		<span class="rInfo"> Italian, Vegan Options, Canadian	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Italian Pizza Canadian $$$' onclick="RestaurantDetails('tony1img')">
+    	<div class="grid_item"><img src="images/tony1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Tony V's Pizza & Restaurant	</span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$	</span> <br />
+  		<span class="rInfo"> Italian, Pizza, Canadian	</span> <br />
+      </div>
+    </li>
+
+    <li class='plist Canadian Vegetarian_Friendly $$' onclick="RestaurantDetails('TuttiFruttiimg')">
+    	<div class="grid_item"><img src="images/tutti1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Tutti Frutti Breakfast & Lunch	</span> <br />
+  		<span class="rInfo"> 4 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$	</span> <br />
+  		<span class="rInfo"> Canadian, Vegetarian Friendly	</span> <br />
+      </div>
+    </li>
+
+      <li class='plist Italian Canadian $$$$' onclick="RestaurantDetails('verd1img')">
+    	<div class="grid_item"><img src="images/verd1.jpg"> </div>
+      <div class="info">
+      	<span class="rName"> Verdicchio Ristorante	</span> <br />
+  		<span class="rInfo"> 4.5 / 5 Rating	</span> <br />
+  		<span class="rInfo"> $$$$	</span> <br />
+  		<span class="rInfo"> Italian, Canadian	</span> <br />
+      </div>
+    </li>
+  </ul>
+
+  <br />
+
+
+
+
+
+
+<h2 class="sub-title" id="Restaurants">Restaurants </h2>
+
+<div id="imgs">
+
+
+<tr>
+<td>
+<input type="image" id="MrPrimeRibimg" src="images\MrPrimeRib.png"  value="Mr Prime Rib" onclick="RestaurantDetails(this.id)"></td>
+
+<td>
+<input type="image" id="TheLaughingBuddhaimg" src="images\TheLaughingBuddha.png" value="The Laughing Buddha" onclick="RestaurantDetails(this.id)"></td>
+
+<td>
+<input type="image" id="DogHouseBarandGrillimg" src="images\DogHouseBarandGrill.png" value="Dog House Bar and Grill" onclick="RestaurantDetails(this.id)"></td>
+
+<td>
+<input type="image" id="GreatLakesPizzaCoimg" src="images\GreatLakesPizzaCo.png"  value="Great Lakes Pizza Co" onclick="RestaurantDetails(this.id)"></td>
+
+<td>
+<input type="image" id="TandooriTastesimg" src="images\TandooriTastes.png" value="Tandoori Tastes" onclick="RestaurantDetails(this.id)" ></td>
+
+<td>
+<input type="image" id="TuttiFruttiimg" src="images\TuttiFrutti.png" value="Tutti Frutti Breakfast & Lunch" onclick="RestaurantDetails(this.id)"></td>
+</tr>
+<td>
+<input type="image" id="TajBistroimg" src="images\TajBistro.png" value="Taj Bistro" onclick="RestaurantDetails(this.id)" ></td>
+
+<td>
+<input type="image" id="PizzaJointimg" src="images\pizzaj1.jpg" value="Pizza Joint" onclick="RestaurantDetails(this.id)"></td>
+
+
+<td>
+<input type="image" id="fiann1img" src="images\fionn0.jpg" value="Fionn MacCool's Irish Pub" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="bella1img" src="images\bella0.jpg" value="Bella Vita Cucina" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="gloria1img" src="images\gloria0.jpg" value="Gloria's Restaurant" onclick="RestaurantDetails(this.id)" ></td>
+
+<td>
+<input type="image" id="gusto1img" src="images\gusto0.png" value="Di Gusto Pizza & Pasta" onclick="RestaurantDetails(this.id)" ></td>
+</tr>
+<td>
+<input type="image" id="hard1img" src="images\rock0.jpg" value="Hardrock 42 Gastropub" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="881img" src="images\880.jpg" value="Lot 88 Steakhouse and Bar" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="mic1img" src="images\mic0.jpg" value="M.I.C. Canadian Eatery and Whiskey Pub" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="mile1img" src="images\mile0.jpg" value="Milestones" onclick="RestaurantDetails(this.id)" ></td>
+
+<td>
+<input type="image" id="motley1img" src="images\motley0.png" value="The Motley Kitchen" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="oscar1img" src="images\oscar0.jpg" value="Oscar's Grill" onclick="RestaurantDetails(this.id)" ></td>
+</tr>
+<td>
+<input type="image" id="pm1img" src="images\pm0.png" value="P&Ms Kouzzina" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="respect1img" src="images\respect0.jpg" value="Respect is Burning Kitchen + Bar" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="sizzle1img" src="images\sizzle0.jpg" value="Sizzle Mongolian Grill" onclick="RestaurantDetails(this.id)" ></td>
+
+
+<td>
+<input type="image" id="tommy1img" src="images\tommy0.jpg" value="Tommy's Not Here" onclick="RestaurantDetails(this.id)" ></td>
+
+<td>
+<input type="image" id="tony1img" src="images\tony0.jpg" value="Tony V's Pizza & Restaurant" onclick="RestaurantDetails(this.id)" ></td>
+
+<td>
+<input type="image" id="tucos1img" src="images\tucos0.jpg" value="Tucos Taco Lounge" onclick="RestaurantDetails(this.id)" ></td>
+</tr>
+
+<td>
+<input type="image" id="verd1img" src="images\verd0.png" value="Verdicchio Ristorante" onclick="RestaurantDetails(this.id)" ></td>
+
+</div>
+
+</table>
+<!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header"> <br />
+      <span class="close">&times;</span>
+      <h2 id="RestaurantName">S</h2> <br />
+    </div>
+    <div class="modal-body">
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/MrPrimeRib1.png" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/MrPrimeRib2.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/MrPrimeRib3.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+
+<div class="mySlides fade">
+  <img src="images/TheLaughingBuddha1.png" style="max-width:900px; max-height:550px">
+  <!--<div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">2 / 3</div>-->
+  <img src="images/TheLaughingBuddha2.png" style="max-width:900px; max-height:550px">
+  </div>
+
+<div class="mySlides fade">
+  <img src="images/TheLaughingBuddha3.png" style="max-width:900px; max-height:550px">
+</div>
+
+
+<div class="mySlides fade">
+  <img src="images/dog1.jpg" style="max-width:900px; max-height:550px">
+  <!--<div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">2 / 3</div>-->
+  <img src="images/dog2.jpg" style="max-width:900px; max-height:550px">
+  </div>
+
+<div class="mySlides fade">
+  <img src="images/dog3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/dog4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">2 / 3</div>-->
+  <img src="images/TandooriTastes1.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/TandooriTastes2.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+  <div class="mySlides fade">
+  <img src="images/TandooriTastes3.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/GreatLakesPizzaCo2.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/GreatLakesPizzaCo1.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+<img src="images/tutti1.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tutti2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/TajBistro1.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/TajBistro2.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/PizzaJoint1.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/PizzaJoint2.PNG" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/fionn2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/fionn3.jpeg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/bella2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/bella3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/gloria2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/gloria3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/gloria4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/gusto2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/gusto3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/gusto4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/hard2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/hard3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/hard4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/882.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/883.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/884.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/mic2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/mic3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/mic4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/mile2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/mile3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/mile4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/motley2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/motley3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/motley4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/oscar2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/oscar3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/oscar4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/pm2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/pm3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/respect2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/respect3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/respect4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/sizzle2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/sizzle3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/sizzle4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tommy2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tommy3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tommy4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tony2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tony3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tony4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tucos2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tucos3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/tucos4.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/verd2.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/verd3.jpg" style="max-width:900px; max-height:550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/verd4.jpg" style="max-width:900px; max-height:550px">
+</div>
+<!--
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>-->
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+
+
+      <p id="Description"><b>Description: </b>Asian restaurant</p>
+      <p id="OpeningHours"></p>
+      <p id="Address"></p>
+      <p id="Phone"> Phone Number: </p>
+    </div>
+    <div class="modal-footer"> <br />
+      <h3 style="text-align:center;" ><a href="" id="Website"> Website </a></h3> <br/>
+    </div>
+  </div>
+
+</div>
+<script type='text/javascript'>
+var RestaurantName="";
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+   if(slideIndex==3 && RestaurantName=="Mr Prime Rib")
+   {
+    slideIndex=0;
+   }
+   if(slideIndex==6 && RestaurantName=="The Laughing Buddha")
+   {
+    slideIndex = 3;
+   }
+   if(slideIndex==10 && RestaurantName=="Dog House Bar and Grill")
+   {
+    slideIndex = 6;
+   }
+   if(slideIndex==13 && RestaurantName=="Tandoori Tastes")
+   {
+    slideIndex = 10;
+   }
+   if(slideIndex==15 && RestaurantName=="Great Lakes Pizza Co")
+   {
+    slideIndex = 13;
+   }
+   if(slideIndex==17 && RestaurantName=="Tutti Frutti Breakfast & Lunch")
+   {
+    slideIndex = 15;
+   }
+   if(slideIndex==19 && RestaurantName=="Taj Bistro")
+   {
+    slideIndex = 17;
+   }
+   if(slideIndex==21 && RestaurantName=="Pizza Joint")
+   {
+    slideIndex = 19;
+   }
+   if(slideIndex==23 && RestaurantName=="Fionn MacCool's Irish Pub")
+   {
+    slideIndex = 21;
+   }
+   if(slideIndex==25 && RestaurantName=="Bella Vita Cucina")
+   {
+    slideIndex = 23;
+   }
+   if(slideIndex==28 && RestaurantName=="Gloria's Restaurant")
+   {
+    slideIndex = 25;
+   }
+   if(slideIndex==31 && RestaurantName=="Di Gusto Pizza & Pasta")
+   {
+    slideIndex = 28;
+   }
+   if(slideIndex==34 && RestaurantName=="Hardrock 42 Gastropub")
+   {
+    slideIndex = 31;
+   }
+   if(slideIndex==37 && RestaurantName=="Lot 88 Steakhouse and Bar")
+   {
+    slideIndex = 34;
+   }
+   if(slideIndex==40 && RestaurantName=="M.I.C. Canadian Eatery and Whiskey Pub")
+   {
+    slideIndex = 37;
+   }
+      if(slideIndex==43 && RestaurantName=="Milestones")
+   {
+    slideIndex = 40;
+   }
+    if(slideIndex==46 && RestaurantName=="The Motley Kitchen")
+   {
+    slideIndex = 43;
+   }
+       if(slideIndex==49 && RestaurantName=="Oscar's Grill")
+   {
+    slideIndex = 46;
+   }
+    if(slideIndex==51 && RestaurantName=="P&Ms Kouzzina")
+   {
+    slideIndex = 49;
+   }
+       if(slideIndex==54 && RestaurantName=="Respect is Burning Kitchen + Bar")
+   {
+    slideIndex = 51;
+   }
+    if(slideIndex==57 && RestaurantName=="Sizzle Mongolian Grill")
+   {
+    slideIndex = 54;
+   }
+    if(slideIndex==60 && RestaurantName=="Tommy's Not Here")
+   {
+    slideIndex = 57;
+   }
+    if(slideIndex==63 && RestaurantName=="Tony V's Pizza & Restaurant")
+   {
+    slideIndex = 60;
+   }
+    if(slideIndex==66 && RestaurantName=="Tucos Taco Lounge")
+   {
+    slideIndex = 63;
+   }
+       if(slideIndex==69 && RestaurantName=="Verdicchio Ristorante")
+   {
+    slideIndex = 66;
+   }
+   showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1;}    //if last slide
+  if (n < 1) {slideIndex = slides.length;}  //if first slide
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+function RestaurantDetails(ID)
+{
+count=0;
+var modal = document.getElementById('myModal');
+
+document.getElementById('RestaurantName').innerHTML=document.getElementById(ID).value;
+RestaurantName=document.getElementById(ID).value;
+if(RestaurantName=="Pizza Joint")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>THE BEST DAMN PIZZA JOINT IN TOWN!!";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1500 Paris St, Sudbury, ON P3E 3B8";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>3:30pm-9:00pm</td></tr>"+
+  "<tr><td>Monday</td><td>Closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>3:30pm-11:00pm</td></tr>"+
+  "<tr><td>Wednesday</td><td>3:30pm-11:00pm</td></tr>"+
+  "<tr><td>Thursday</td><td>3:30pm-11:00pm</td></tr>"+
+  "<tr><td>Friday</td><td>3:30pm-12:00am</td></tr><tr>"+
+  "<td>Saturday</td><td>3:30pm-12:00am</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-522-2857";
+  slideIndex = 20;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Taj Bistro")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>An Indian Restaurant known for delicious food and delightful hospitality. Serving Oriental and Continental Food.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>151 Larch St, Sudbury, ON P3E 1C3";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>11:30a.m-2:00p.m, 5:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:30a.m-2:00p.m, 5:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:30a.m-2:00p.m, 5:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:30a.m-2:00p.m, 5:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:30a.m-2:00p.m, 5:00p.m-9:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>12:00p.m-2:00p.m, 5:00p.m-9:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-222-8258";
+  slideIndex = 18;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Tutti Frutti Breakfast & Lunch")
+{
+  document.getElementById('Description').innerHTML="<b>Description:</b> Looking for great breakfast & lunch? HERE";
+  document.getElementById('Address').innerHTML="<b>Address: </b>125 Loachs Rd, Sudbury, ON P3E 2P8";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>6:00a.m-3:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>6:00a.m-3:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>6:00a.m-3:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>6:00a.m-3:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>6:00a.m-3:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>6:00a.m-3:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>6:00a.m-3:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-586-8846";
+  slideIndex = 16;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Tandoori Tastes")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Tandoori Tastes is a full-service Indian/Pakistani restaurant offering dine-in, takeout, and delivery options for both lunch and dinner.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>96 Larch St, Sudbury, ON P3E 5M7";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>Closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-10:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:00a.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-675-7777";
+  slideIndex = 11;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Great Lakes Pizza Co")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Great place for pizza";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1769 Regent St, Sudbury, ON P3E 3Z7";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-1:00a.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:00a.m-1:00a.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-522-2828";
+  slideIndex = 14;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Dog House Bar and Grill")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>The Dog House Bar and Grill has become one of the top locations for entertainment and live music in the Twin Cities.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>212 Romanet Ln, Sudbury, ON P3E 3N8";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>12:00p.m-1:00a.m</td></tr>"+
+  "<tr><td>Monday</td><td>3:00p.m-1:00a.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>3:00p.m-1:00a.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>3:00p.m-1:00a.m</td></tr>"+
+  "<tr><td>Thursday</td><td>3:00p.m-1:00a.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:30a.m-1:00a.m</td></tr><tr>"+
+  "<td>Saturday</td><td>3:00p.m-1:00a.m</td></tr></table>";;
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-675-2275";
+  slideIndex = 7;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Mr Prime Rib")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>A Sudbury restaurant featuring the very best in prime rib, steaks, ribs, shellfish, salads, desserts and an extensive wine list.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>777 Barrydowne Rd, Sudbury, ON P3A 3T6";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>4:00p.m-8:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-9:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>4:00p.m-9:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-566-5353";
+  slideIndex = 1;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="The Laughing Buddha")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Best patio in sudbury, great vibes, gourmet pizza, sandwhiches and a huge selection of Ontario craft beer and beer from around the world.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>194 Elgin St, Sudbury, ON P3E 3N7";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>12:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>4:30p.m-11:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>12:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>12:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>12:00p.m-9:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:30a.m-2:00a.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:30a.m-2:00a.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-673-2112";
+  slideIndex = 4;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Fionn MacCool's Irish Pub")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Experience delicious food and drinks in an awesome atmosphere at your local pub.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1875 Regent St, Sudbury, ON P3E 3Z7";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>10:30a.m-10:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-12:00a.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:00a.m-12:00a.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-522-8827";
+  slideIndex = 22;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Bella Vita Cucina")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Founded in 2008, Bella Vita Cucina (Beautiful Life Kitchen) is a family owned and operated business. We pride ourselves in using only the freshest ingredients.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>493 Kathleen St, Sudbury, ON P3C 2M7";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>4:00p.m-10:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:30a.m-10:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:30a.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:30a.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:30a.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:30a.m-10:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>5:00p.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-670-8482";
+  slideIndex = 24;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Gloria's Restaurant")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>At Gloria's Restaurant we pride ourselves in bringing a tradition of quality and comfort.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>469 Bouchard St, Sudbury, ON P3E 2K8";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>8:00a.m-3:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>6:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>6:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>6:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Friday</td><td>6:00a.m-8:30p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>6:00a.m-3:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-522-1476";
+  slideIndex = 26;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Di Gusto Pizza & Pasta")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Di Gusto takes you back to Italy with their traditional menu.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1620 Regent St, Sudbury, ON P3E 5W3";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>5:00p.m-10:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-10:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:00a.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-222-7273";
+  slideIndex = 29;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Hardrock 42 Gastropub")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>2019 Hardrock42.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>117 Elm St, Sudbury, ON P3C 1T3";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>8:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>7:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>7:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>7:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>7:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>7:00a.m-11:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>8:00a.m-2:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-586-3303";
+  slideIndex = 32;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Lot 88 Steakhouse and Bar")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Lot 88 Steakhouse & Bar serves our locations with an innovative menu and friendly service. A traditional steakhouse with a modern twist!";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1070 Kingsway, Sudbury, ON P3B 2E5";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>3:00p.m-10:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-10:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>3:00p.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-586-0881";
+  slideIndex = 35;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="M.I.C. Canadian Eatery and Whiskey Pub")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>We serve Canadian food with a menu full of variety. From fresh Reserve Angus steak and In-house Smoked Ribs, to classic Sheppard Pie and even Poutine, ...";
+  document.getElementById('Address').innerHTML="<b>Address: </b>200 Falconbridge Rd, Sudbury, ON P3A 5K4";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-12:00a.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:00a.m-11:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-524-7273";
+  slideIndex = 38;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Milestones")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>We want to invite you to sit at our table as we bring delicious and innovative flavours to each dish.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1299 Marcus Dr, Sudbury, ON P3B 4K6";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-11:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-12:00a.m</td></tr><tr>"+
+  "<td>Saturday</td><td>10:00a.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>70-5524-1954";
+  slideIndex = 41;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="The Motley Kitchen")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>With a passion for food and a do-it-yourself attitude, The Motley Kitchen is a multi-faceted business - featuring a bistro, event space, catering facility and kitchen ...";
+  document.getElementById('Address').innerHTML="<b>Address: </b>70 Young St, Sudbury, ON P3E 3G4";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>10:00a.m-2:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>closed</td></tr>"+
+  "<tr><td>Wednesday</td><td>closed</td></tr>"+
+  "<tr><td>Thursday</td><td>closed</td></tr>"+
+  "<tr><td>Friday</td><td>closed</td></tr><tr>"+
+  "<td>Saturday</td><td>10:00a.m-2:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-222-6685";
+  slideIndex = 44;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Oscar's Grill")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Oscar's Grill Sudbury Restaurant French American Special Events Live Music.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>86 Durham St, Sudbury, ON P3E 3M6";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-10:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>4:00p.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-586-3508";
+  slideIndex = 47;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="P&Ms Kouzzina")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Through honest hard work, attention to detail, a passion for great food, great wines and involvement in the community, P&M's Kouzzina has been a destination ...";
+  document.getElementById('Address').innerHTML="<b>Address: </b> 1463 Lasalle Blvd, Sudbury, ON P3A 1Z8";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-10:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:00a.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-560-2500";
+  slideIndex = 50;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Respect is Burning Kitchen + Bar")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Respect is Burning has been open since 2001 and is a Vintage Italian Tavern and Delicious Home Cookery pulling inspiration from the archives of Nonnas, ...";
+  document.getElementById('Address').innerHTML="<b>Address: </b> 82 Durham St, Sudbury, ON P3E 3M6";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>5:00p.m-9:30:p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>5:00p.m-9:30:p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>5:00p.m-10:00:p.m</td></tr>"+
+  "<tr><td>Friday</td><td>5:00p.m-12:00:a.m</td></tr><tr>"+
+  "<td>Saturday</td><td>5:00p.m-12:00:a.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-675-5777";
+  slideIndex = 52;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Sizzle Mongolian Grill")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Mongolian barbeque first made a name for itself in the early 1950's. ... Sizzle Mongolian grill offers more than an endless options of flavorful foods.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1145 Lorne St, Sudbury, ON P3C 4S8";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:30a.m-2:00p.m, 5:00p.m-8:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:30a.m-2:00p.m, 5:00p.m-8:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:30a.m-2:00p.m, 5:00p.m-8:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:30a.m-2:00p.m, 5:00p.m-8:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>closed</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-222-4745";
+  slideIndex = 55;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Tommy's Not Here")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Tommy's Not Here, a premier dining establishment located in Northern Ontario, in the City of Sudbury. A culinary hideaway of exquistie cuisine.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1889 Regent St, Sudbury, ON P3E 3Z7";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>4:30p.m-10:30p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>4:30p.m-10:30p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>4:30p.m-10:30p.m</td></tr>"+
+  "<tr><td>Friday</td><td>4:30p.m-10:30p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>4:30p.m-10:30p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-522-2822";
+  slideIndex = 58;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Tony V's Pizza & Restaurant")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Tony V's – Pizza Restaurants Sudbury Ontario has been open for over 15 years. Come try a pizza, a homemade soup, or a daily special!";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1323 Martindale Rd, Sudbury, ON P3E 4J7";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>11:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-8:30p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-9:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-9:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>12:00p.m-9:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-522-2883";
+  slideIndex = 61;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Tucos Taco Lounge")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Tapas bar serving simple and authentic Mexican and Central American styled food in a casual lounge atmosphere.";
+  document.getElementById('Address').innerHTML="<b>Address: </b> 582 Kathleen St, Sudbury, ON P3C 2N3";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>11:00a.m-9:00p.m</td></tr>"+
+  "<tr><td>Monday</td><td>closed</td></tr>"+
+  "<tr><td>Tuesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>11:00a.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>11:00a.m-11:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>11:00a.m-11:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-222-8459";
+  slideIndex = 64;
+  showSlides(slideIndex);
+}
+if(RestaurantName=="Verdicchio Ristorante")
+{
+  document.getElementById('Description').innerHTML="<b>Description: </b>Experience traditional flavours while sampling the best from our local Northern Ontario growers. Freshness is key to any great meal.";
+  document.getElementById('Address').innerHTML="<b>Address: </b>1351-D Kelly Lake Rd, Sudbury, ON P3E 5P5";
+  document.getElementById('OpeningHours').innerHTML="<b>Opening Hours: </b><table><tr><th>Day of Week</th><th>Timing</th></tr>"+
+  "<tr><td>Sunday</td><td>closed</td></tr>"+
+  "<tr><td>Monday</td><td>5:00p.m-10:00p.m</td></tr>"+
+  "<tr><td>Tuesday</td><td>5:00p.m-10:00p.m</td></tr>"+
+  "<tr><td>Wednesday</td><td>5:00p.m-10:00p.m</td></tr>"+
+  "<tr><td>Thursday</td><td>5:00p.m-10:00p.m</td></tr>"+
+  "<tr><td>Friday</td><td>5:00p.m-10:00p.m</td></tr><tr>"+
+  "<td>Saturday</td><td>5:00p.m-10:00p.m</td></tr></table>";
+  document.getElementById('Phone').innerHTML="<b>Phone: </b>705-523-2794";
+  slideIndex = 67;
+  showSlides(slideIndex);
+}
+// Get the button that opens the modal
+var btn = document.getElementById(ID);
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal
+modal.style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+$(document).keydown(function(e){
+  if(e.keyCode == 27){
+    modal.style.display = "none";
+  }
+});
+
+
+
+
+
+/*
+function searchFunct() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementsByClassName("theList");
+    li = ul.getElementsByClassName("plist");
+    div = li.getElementsByClassName("info");
+
+    for (i = 0; i < div.length; i++) {
+        a = div[i].getElementsByClassName("rName")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+}
+</script>
+
+<section class= "beating-heart" id="about">
+
+  <div class ="wrapper">
+    <h2 class="sub-title">About</h2>
+    <p> Designed by Joel Catterall, Ahmed Alrashdi, and Abdulmohsen Alhussain </p>
+
+    <span>I</span>
+    <svg class="heart" viewBox="0 0 32 29.6">
+    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+    </svg>
+
+    <span>FOOD</span>
+
+  </div>
+
+</section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/parallax.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/masonry.js"></script>
+    <script>
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+    </script>
+</body>
+
+</html>
